@@ -151,7 +151,7 @@ footer {
     transition: max-height 0.3s ease-out;
 }
 
-/* Для тултипов – скрыты по умолчанию, появляются сверху */
+
 .tooltip {
     position: relative;
     display: inline-block;
@@ -177,3 +177,56 @@ footer {
     width: 100%;
 }
 
+.popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    place-items: center;
+}
+.popup-overlay.show {
+    display: grid;
+}
+.popup {
+    position: relative;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    
+}
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.slider-container {
+    overflow: hidden;
+}
+.slider {
+    display: flex;
+    transition: 0.4s;
+}
+.slide {
+    min-width: 100%;
+    flex-shrink: 0;
+}
+.slider-arrow {
+    cursor: pointer;
+}
+.slider-dot {
+    cursor: pointer;
+}
